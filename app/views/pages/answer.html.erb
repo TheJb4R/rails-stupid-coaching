@@ -1,0 +1,15 @@
+<h1>Coach answer to your question</h1>
+
+<p>Your message: <%=@message%></p>
+
+<% if @message.capitalize == "I am going to work"%>
+  <p>Coach answer: <%= "Great!" %></p>
+<% elsif @message.include?("?")  %>
+  <p>Coach answer: <%= "Silly question, get dressed and go to work!" %></p>
+<% else %>
+  <p>Coach answer: <%= "I don't care, get dressed and go to work!" %></p>
+<% end %>
+
+
+<%= link_to "Want to ask another question?", ask_path %>
+<p><%= link_to "Go back to the homepage", root_path%></p>
